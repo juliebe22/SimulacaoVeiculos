@@ -14,7 +14,7 @@ public class Veiculo {
     public String getModelo() {
         return modelo;
     }
-    public double getVelocidade() {
+    public int getVelocidade() {
         return velocidade;
     }
     public void setMarca(String marca) {
