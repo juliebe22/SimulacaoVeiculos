@@ -1,9 +1,9 @@
 public class Veiculo {
     private String marca;
     private String modelo;
-    private double velocidade;
+    private int velocidade;
     
-    public void Veiculo(String marca, String modelo, double velocidade) {
+    public Veiculo(String marca, String modelo, int velocidade) {
         this.marca = marca;
         this.modelo = modelo;
         this.velocidade = velocidade;
@@ -23,7 +23,7 @@ public class Veiculo {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    public void setVelocidade(double velocidade) {
+    public void setVelocidade(int velocidade) {
         if (velocidade >= 0) {
         this.velocidade = velocidade;
         } else {

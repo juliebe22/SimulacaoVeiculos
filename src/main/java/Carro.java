@@ -1,8 +1,8 @@
 public class Carro extends Veiculo {
     public Carro(String marca, String modelo) {
-        super (marca, modelo, 0);
+        super(marca, modelo, 0);
     }
-    public Carro(String marca, String modelo, double valocidadeInicial) {
+    public Carro(String marca, String modelo, int velocidadeInicial) {
         super(marca, modelo, velocidadeInicial);
     }
     public void acelerar(){
@@ -15,7 +15,7 @@ public class Carro extends Veiculo {
         int novaVelocidade = getVelocidade() - 10;
         setVelocidade(Math.max(novaVelocidade, 0));
     }
-    public void frear() {
+    public void frear(int decremento) {
         int novaVelocidade = getVelocidade() - decremento;
         setVelocidade(Math.max(novaVelocidade, 0));
     }
