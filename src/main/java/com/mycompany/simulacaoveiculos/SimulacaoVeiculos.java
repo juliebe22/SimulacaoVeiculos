@@ -1,20 +1,27 @@
-public class Main {
+public class SimulacaoVeiculos {
+
     public static void main(String[] args) {
-        Garagem minhaGaragem = new Garagem(5);
+        Garagem minhaGaragem = new Garagem(3);
 
-        // Testando Sobrecarga de Construtores
-        Carro c1 = new Carro("Toyota", "Corolla");
-        Carro c2 = new Carro("Honda", "Civic", 50);
+        Carro carro1 = new Carro("Toyota", "Corolla");
 
-        // Testando Sobrecarga de Métodos
-        c1.acelerar();      // +10
-        c2.acelerar(30);    // +30
-        c2.frear();         // -10
+        Carro carro2 = new Carro("Honda", "Civic", 50);
 
-        minhaGaragem.adicionarCarro(c1);
-        minhaGaragem.adicionarCarro(c2);
+        System.out.println("--- Testando Carro 1 ---");
+        carro1.acelerar();     
+        carro1.acelerar(25);    
+        carro1.frear();        
+        System.out.println(carro1);
 
-        // Testando Sobrescrita (toString)
+        System.out.println("\n--- Testando Carro 2 ---");
+        carro2.acelerar(30);    
+        carro2.frear(100);      
+        System.out.println(carro2);
+
+        System.out.println("\n--- Estacionando ---");
+        minhaGaragem.adicionarCarro(carro1);
+        minhaGaragem.adicionarCarro(carro2);
+
         minhaGaragem.exibirCarros();
     }
 }
