@@ -1,23 +1,23 @@
 public class Garagem {
     private Carro[] vagas;
-    private int totalCarros;
+    private int contador;
     
     public Garagem(int capacidade) {
-       this.vagas = new Carro [capacidade];
-       this.totalCarros = 0;
+       this.vagas = new Carro[capacidade];
+       this.contador = 0;
     }
-    public void adicionarCarro(Carro carro) {
-       if (totalCarros < vagas.length) {
-           vagas[totalCarros] = carro;
-           totalCarros++;
+    public void adicionarCarro(Carro novoCarro) {
+       if (contador < vagas.length) {
+           vagas[contador] = novoCarro;
+           contador++;
        } else {
-           System.out.print("Garagem lotada!");
+           System.out.println("Garagem lotada!");
        }
     }
     public void exibirCarros() {
-        System.out.print("--- Vaículos na Garagem ---");
-        for (int i = 0; i < totalCarros; i++) {
-            System.out.print(vagas[i].toString());
+        System.out.println("--- Veículos na Garagem ---");
+        for (int i = 0; i < contador; i++) {
+            System.out.print(vagas[i]);
         }
     }
 }
