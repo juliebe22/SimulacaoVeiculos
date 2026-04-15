@@ -1,9 +1,14 @@
 public class Carro extends Veiculo {
-    public Carro(String marca, String modelo) {
-        super(marca, modelo, 0);
+    
+    public Carro(String marca, String modelo, String placa) {
+        super(marca, modelo, placa, 0);
     }
-    public Carro(String marca, String modelo, int velocidadeInicial) {
-        super(marca, modelo, velocidadeInicial);
+    public Carro(String marca, String modelo, String placa, int velocidadeInicial) {
+        super(marca, modelo, placa, velocidadeInicial);
+    }
+    @Override
+    public double calcularConsumo() {
+        return getVelocidade() * 0.1;
     }
     public void acelerar(){
         setVelocidade(getVelocidade()+10);

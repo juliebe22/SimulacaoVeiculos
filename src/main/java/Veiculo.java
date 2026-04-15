@@ -43,6 +43,9 @@ public abstract class Veiculo {
     public String getModelo() {
         return modelo;
     }
+    public String getPlaca() {
+        return placa;
+    }
     public int getVelocidade() {
         return velocidade;
     }
